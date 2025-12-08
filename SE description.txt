@@ -1,0 +1,19 @@
+- Input:
++ IR[31:7]
++ SE_Control[2:0]
+
+- Output: O[31:0]
+
+Lệnh I: SE_Control = 000
+- imm[11:0] = IR[31:20] --> O[31:0] = Sign_extend of Imm
+Lệnh S: SE_Control = 001
+- imm[11:0] = {IR[31:25], IR[11:7]} --> O[31:0] = Sign_extend of Imm
+Lệnh B: SE_Control = 010
+- imm[12:0] = {IR[31], IR[7], IR[30:25], IR[11:8], 1'b0} ---> O[31:0] = Sign_extend of Imm
+Lệnh U: SE_Control = 011
+- imm[19:0] = IR[31:12] ---> O[31:0] = Imm << 12
+Lệnh J: SE_Control = 100
+- imm[20:0] = {IR[31], IR[19:12], IR[20], IR[30:21], 1'b0} ---> O[31:0] = Sign_extend of Imm
+
+
+

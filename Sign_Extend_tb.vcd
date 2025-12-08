@@ -1,0 +1,61 @@
+$date
+	Mon Dec 08 17:21:12 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module Sign_Extend_tb $end
+$var wire 32 ! imm [31:0] $end
+$var reg 32 " IR [31:0] $end
+$var reg 3 # SE_Control [2:0] $end
+$scope module dut $end
+$var wire 32 $ IR [31:0] $end
+$var wire 3 % SE_Control [2:0] $end
+$var reg 32 & imm [31:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b11111111111111111111111111111111 &
+b0 %
+b11111111111100000000000000000011 $
+b0 #
+b11111111111100000000000000000011 "
+b11111111111111111111111111111111 !
+$end
+#10000
+b101 !
+b101 &
+b1 #
+b1 %
+b1010010011 "
+b1010010011 $
+#20000
+b10011100010 !
+b10011100010 &
+b10 #
+b10 %
+b1001110000000000000000101111111 "
+b1001110000000000000000101111111 $
+#30000
+b10101011110011011110000000000000 !
+b10101011110011011110000000000000 &
+b11 #
+b11 %
+b10101011110011011110000100100011 "
+b10101011110011011110000100100011 $
+#40000
+b100 !
+b100 &
+b100 #
+b100 %
+b10000000000000000011011 "
+b10000000000000000011011 $
+#50000
