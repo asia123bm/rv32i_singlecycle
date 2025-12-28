@@ -8,7 +8,7 @@ module DMEM #(
     input wire [31:0] data_in,          
     input wire [2:0] mode,               
     output reg [31:0] data_out           
-
+);
     reg [7:0] mem [0:MEM_SIZE-1];
 
     localparam BYTE = 3'b000;

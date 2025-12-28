@@ -3,12 +3,12 @@ module reg_files (
     input  wire        we,       
     input  wire [4:0]  ra1,       
     input  wire [4:0]  ra2,       
-    input  wire        rsel,     
 
     input  wire [4:0]  wa,        
     input  wire [31:0] wd,       
 
-    output wire [31:0] rd        
+    output wire [31:0] rd1,
+    output wire [31:0] rd2        
 );
 
     reg [31:0] regs [0:31];
@@ -24,8 +24,6 @@ module reg_files (
             regs[wa] <= wd;
     end
 
-    assign rd = (rsel == 1'b0) ?
-                ((ra1 == 5'd0) ? 32'd0 : regs[ra1]) :
-                ((ra2 == 5'd0) ? 32'd0 : regs[ra2]);
-
+    assign rd1 = (ra1 == 5'd0) ? 32'd0 : regs[ra1];
+    assign rd2 = (ra2 == 5'd0) ? 32'd0 : regs[ra2];
 endmodule
